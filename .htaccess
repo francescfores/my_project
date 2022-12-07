@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^myproject-production-5b7c.up.railway.app/$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^https://myproject-production-5b7c.up.railway.app/$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www.myproject-production-5b7c.up.railway.app/$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*) /public/$1 [L]
