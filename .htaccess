@@ -1,14 +1,14 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^api.datandtec.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.api.datandtec.com$
+RewriteCond %{HTTP_HOST} ^myproject-production-5b7c.up.railway.app/$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.myproject-production-5b7c.up.railway.app/$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*) /public/$1 [L]
 
 </IfModule>
 
 #RewriteCond %{HTTPS} off
-#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 <IfModule mod_headers.c>
 Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
